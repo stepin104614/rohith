@@ -5,13 +5,17 @@ PROJECT_NAME = rohith
 BUILD = build
 
 # All source code files
-SRC = main.c\
-src/factorial.c\
+SRC = Factorial/main.c\
+Factorial/src/factorial.c\
+
 
 # All include folders with header files
 INC	= -Iinc
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
+# Document files
+DOCUMENTATION_OUTPUT = documentation/html
 
 # Default target built
 $(PROJECT_NAME):all
@@ -25,11 +29,6 @@ all: $(SRC) $(BUILD)
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
 	./$(PROJECT_OUTPUT).out
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
-	./$(TEST_OUTPUT)
 
 # Remove all the built files, invoke by `make clean`
 clean:
