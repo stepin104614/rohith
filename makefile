@@ -5,7 +5,7 @@ PROJECT_NAME = rohith
 BUILD = build
 
 # All source code files
-SRC = Factorial/main.c\
+SRC = main.c\
 Factorial/src/factorial.c\
 
 
