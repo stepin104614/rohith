@@ -6,7 +6,7 @@ BUILD = build
 
 # All source code files
 SRC = main.c\
-Factorial/src/factorial.c\
+src/factorial.c\
 
 # All include folders with header files
 INC	= -Iinc
